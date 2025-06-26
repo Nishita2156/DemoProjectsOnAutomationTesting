@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+
+    tools {
+        maven 'Maven 3'      // Make sure 'Maven 3' is configured in Jenkins Global Tool Configuration
+        jdk 'Java 11'        // Make sure 'Java 11' is configured as well
+    }
+
+    environment {
+        CHROME_DRIVER_PATH = '/usr/bin/chromedriver' // Adjust path as needed
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build & Test') {
+            steps {
+                sh 'mvn clean test'
+            }
+        }
+
+        stage('Generate Allure Report') {
+            steps {
+                allure includeProperties: true, jdk: 'Java 11', results: [[path: 'target/allure-results']]
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: '**/target/**/*.png', allowEmptyArchive: true
+            junit 'target/surefire-reports/*.xml'
+        }
+    }
+}

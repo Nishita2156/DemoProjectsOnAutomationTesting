@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Selenium4 Allure Suite">
+  <test name="Feature Tests">
+    <classes>
+      <class name="tests.Selenium4FeaturesDemo"/>
+    </classes>
+  </test>
+</suite>
