@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="BankingTestSuite">
+  <test thread-count="5" name="BankingAPITest">
+    <classes>
+      <class name="com.bank.api.tests.SchemaValidationTest"/>
+      <class name="com.bank.api.core.BaseApiTest"/>
+      <class name="com.bank.api.tests.AccountApiTest"/>
+      <class name="com.bank.api.tests.LoginApiTest"/>
+    </classes>
+  </test> <!-- BankingAPITest -->
+</suite> <!-- BankingTestSuite -->
