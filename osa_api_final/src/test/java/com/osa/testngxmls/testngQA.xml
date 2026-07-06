@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+	  <classes>
+		  <class name="com.osa.runner.Runner"/>
+	  </classes>
+  </test>
+</suite> 
+
+
+
+
+<!--  this file we make it for run.when we have finish every set up then we have to run here and we have to refresh the project 
+after run otherway report doesn't 'come under the target folder and test-output does't 'come without refresh project.
+when we finish everthing then we have to open cmd then we have to check its work cmd or not.
+
+
+ -->
