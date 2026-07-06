@@ -40,3 +40,112 @@ This project documents my learning path from zero coding knowledge to **job-read
 - **Version Control:** Git & GitHub
 
 ## 📂 Project Structure
+DemoProjectsOnAutomationTesting/
+│
+├── src/
+│   ├── main/
+│   │   └── java/org/example/
+│   │       ├── Day1VariablesBasics.java        
+│   │       ├── Day2ControlFlow.java             
+│   │       ├── Day3MethArrayList.java           
+│   │       ├── Day4OOP.java                     
+│   │       ├── Day5Inheritance.java             
+│   │       ├── FirstSeleniumTest.java           
+│   │       └── Main.java                        
+│   │
+│   └── test/
+│       ├── java/org/example/
+│       │   └── FirstSeleniumTest.java           
+│       │
+│       └── resources/
+│           ├── LoginTestCases.md                
+│           └── GoogleSearchTestCases.md         
+│
+├── pom.xml                                      
+├── README.md                                    
+├── .gitignore                                   
+└── target/                                      
+
+## Technologies Used
+
+| Technology | Version | Purpose |
+|-----------|---------|---------|
+| Java | 21 | Programming Language |
+| Maven | 3.9+ | Build Tool |
+| Selenium | 4.15.0 | UI Automation |
+| TestNG | 7.7.1 | Testing Framework |
+| Git | Latest | Version Control |
+
+---
+
+## Week 1 Learning Path
+
+1. **Days 1-3:** Java Syntax (variables, control flow, methods, arrays)
+2. **Days 4-5:** OOP Mastery (classes, inheritance, polymorphism)
+3. **Day 6:** QA Testing Theory (SDLC, STLC, test case design)
+4. **Day 7:** GitHub & Portfolio Setup
+
+---
+
+## Week 2 (In Progress) 🔄
+
+Next week I'll focus on:
+- Selenium WebDriver automation
+- Page Object Model (POM) architecture
+- Real website automation
+- Advanced locator strategies
+- TestNG test execution
+- Cross-browser testing
+
+---
+
+## 30-Day Progress
+
+| Week | Status | Focus Area |
+|------|--------|-----------|
+| **Week 1** | ✅ DONE | Java Fundamentals + QA Theory |
+| **Week 2** | 🔄 Now | Selenium WebDriver |
+| **Week 3** | ⏳ Planned | API Testing |
+| **Week 4** | ⏳ Planned | CI/CD & Job Search |
+
+---
+
+## How to Use This Repository
+
+1. **Browse the code** to see my Java learning journey
+2. **Check test cases** to understand QA documentation
+3. **Follow commits** to see daily progress
+4. **Use as template** for your own QA learning path
+
+---
+
+## Key Learnings
+
+✅ **Consistency matters** — 7 days, 7 complete days of learning  
+✅ **Foundation is critical** — OOP is the base for automation  
+✅ **Documentation counts** — Professional test cases = hireable QA engineer  
+✅ **Public portfolio** — GitHub visibility opens doors
+
+---
+
+## Next Steps
+
+- Start Week 2 (Selenium mastery)
+- Write 20+ Selenium tests
+- Implement Page Object Model
+- Set up CI/CD pipeline
+- Apply to QA automation roles
+
+---
+
+## Contact & Connect
+
+- **GitHub:** Nishita2156
+- **Status:** 🟢 Actively Learning
+- **Goal:** Job-ready QA Automation Engineer by Day 30
+- **Progress:** 33% Complete (Week 1 of 4)
+
+---
+
+**Last Updated:** July 2026  
+**Current Phase:** Week 1 ✅ → Week 2 🚀
