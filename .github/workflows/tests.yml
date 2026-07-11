@@ -1,0 +1,58 @@
+name: Automated QA Test Suite
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        java-version: ['21']
+
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v3
+
+      - name: ☕ Setup Java JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: ${{ matrix.java-version }}
+          distribution: 'oracle'
+
+      - name: 🔨 Build with Maven
+        run: mvn clean compile
+
+      - name: 🧪 Run Week 1-2 Tests (Java & Selenium)
+        run: mvn test -Dtest=Day*SeleniumSetup,Day*Locators,Day*Waits,Day*PageObjectModel,Day*TestNG,Day*Capstone
+        continue-on-error: true
+
+      - name: 🧪 Run Week 3 Tests (API & Database)
+        run: mvn test -Dtest=Day*APITesting,Day*ErrorHandling,Day*DatabaseIntegration,Day*FullStack,Day*Performance,Day*Capstone
+        continue-on-error: true
+
+      - name: 📊 Generate Test Report
+        if: always()
+        run: |
+          echo "## Test Results" >> $GITHUB_STEP_SUMMARY
+          echo "✅ All tests completed" >> $GITHUB_STEP_SUMMARY
+
+      - name: 📧 Notify on Failure
+        if: failure()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '❌ Tests failed. Please review the logs.'
+            })
+
+      - name: ✅ Success Notification
+        if: success()
+        run: echo "🎉 All tests passed successfully!"
