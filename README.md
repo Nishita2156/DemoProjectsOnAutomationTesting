@@ -41,31 +41,34 @@ This project documents my learning path from zero coding knowledge to **job-read
 
 ## 📂 Project Structure
 DemoProjectsOnAutomationTesting/
-│
 ├── src/
-│   ├── main/
-│   │   └── java/org/example/
-│   │       ├── Day1VariablesBasics.java        
-│   │       ├── Day2ControlFlow.java             
-│   │       ├── Day3MethArrayList.java           
-│   │       ├── Day4OOP.java                     
-│   │       ├── Day5Inheritance.java             
-│   │       ├── FirstSeleniumTest.java           
-│   │       └── Main.java                        
-│   │
-│   └── test/
-│       ├── java/org/example/
-│       │   └── FirstSeleniumTest.java           
-│       │
-│       └── resources/
-│           ├── LoginTestCases.md                
-│           └── GoogleSearchTestCases.md         
-│
-├── pom.xml                                      
-├── README.md                                    
-├── .gitignore                                   
-└── target/                                      
-
+│   ├── main/java/org/example/
+│   │   ├── Day1VariablesBasics.java
+│   │   ├── Day2ControlFlow.java
+│   │   └── ... (Java fundamentals)
+│   └── test/java/org/example/
+│       ├── LoginPage.java (POM)
+│       ├── ProductPage.java (POM)
+│       ├── CartPage.java (POM)
+│       ├── DatabaseHelper.java
+│       ├── Day8_SeleniumSetup.java
+│       ├── Day9_Locators_Mastery.java
+│       ├── Day10_WaitsActionsInteractions.java
+│       ├── Day11_PageObjectModel.java
+│       ├── Day12_TestNGAdvanced.java
+│       ├── Day13_CapstoneProject.java (77+ UI tests)
+│       ├── Day14_APITestingBasics.java
+│       ├── Day15_AdvancedAPITesting.java
+│       ├── Day16_ErrorHandlingEdgeCases.java
+│       ├── Day17_DatabaseIntegrationTesting.java
+│       ├── Day18_FullStackTestingProject.java
+│       ├── Day19_PerformanceSecurityTesting.java
+│       └── Day20_Week3Capstone.java (Complete Order Management System)
+├── pom.xml
+├── .github/
+│   └── workflows/
+│       └── tests.yml (CI/CD Pipeline)
+└── README.md
 ## Technologies Used
 
 | Technology | Version | Purpose |
